@@ -1,39 +1,43 @@
-import React, { useState } from 'react'
-import { Cabecalho } from '../componentes/cabecalho'
-import { Cartao } from '../componentes/cartao'
-import { ListaItem } from '../componentes/listaItem'
-import { Rodape } from '../componentes/rodape'
+import React from 'react';
+import { Cabecalho } from '../componentes/cabecalho';
+import { Titulo } from '../componentes/title';
+import { TituloSessao } from '../componentes/tituloSessao';
+import { Cartao } from '../componentes/cartao';
+import { Rodape } from '../componentes/rodape';
 
-export default function App() {
-  const [contador, setContador] = useState(0)
+const projetos = [
+  { nome: 'Projeto A', descricao: 'Descrição do projeto A' },
+  { nome: 'Projeto B', descricao: 'Descrição do projeto B' },
+  { nome: 'Projeto C', descricao: 'Descrição do projeto C' },
+];
 
-  const incrementarContador = () => {
-    setContador(contador + 1)
-  }
-
-  const listaItens = ['React', 'JavaScript', 'CSS', 'HTML']
-
+export default function Home() {
   return (
     <div className="app">
-      <Cabecalho titulo="Minha Aplicação React" subtitulo="Aprendendo componentes básicos" />
-      
-      <main>
-        <Cartao
-          titulo="Exemplo de Cartão"
-          conteudo={`Este é um exemplo de cartão. O contador está em: ${contador}`}
-          botaoTexto="Incrementar"
-          onClickBotao={incrementarContador}
-        />
-
-        <h3>Lista de Tecnologias:</h3>
-        <ul>
-          {listaItens.map((item, index) => (
-            <ListaItem key={index} texto={item} />
-          ))}
-        </ul>
-      </main>
-
-      <Rodape texto="© 2024 Minha Aplicação React" />
+      <Cabecalho
+        nome="Meu Portfólio"
+        subtitulo="Bem-vindo ao meu espaço"
+        descricao="Aqui você encontrará uma seleção dos meus projetos e experiências."
+      />
+      <Titulo nome="Projetos" subnome="Alguns dos meus trabalhos recentes" />
+      <section className="projetos">
+        {projetos.map((projeto, index) => (
+          <Cartao
+            key={index}
+            titulo={projeto.nome}
+            conteudo={projeto.descricao}
+            botaoTexto="Ver Projeto"
+            onClickBotao={() => alert(`Abrindo ${projeto.nome}`)}
+          />
+        ))}
+      </section>
+      <TituloSessao titulo="Experiência e Educação" />
+      <Rodape
+        nome="Seu Nome"
+        linkGithub="https://github.com/seuusuario"
+        linkLinkedin="https://linkedin.com/in/seuusuario"
+        email="seuemail@exemplo.com"
+      />
     </div>
-  )
+  );
 }
