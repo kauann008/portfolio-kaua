@@ -6,7 +6,7 @@ import { Cartao } from '../componentes/cartao';
 import { Rodape } from '../componentes/rodape';
 
 const projetos = [
-  { nome: 'Projeto A', descricao: 'Descrição do projeto A' },
+  { nome: 'Projeto kauan', descricao: 'Descrição do projeto A' },
   { nome: 'Projeto B', descricao: 'Descrição do projeto B' },
   { nome: 'Projeto C', descricao: 'Descrição do projeto C' },
 ];
@@ -36,7 +36,7 @@ export default function Home() {
         nome="Seu Nome"
         linkGithub="https://github.com/seuusuario"
         linkLinkedin="https://linkedin.com/in/seuusuario"
-        email="seuemail@exemplo.com"
+        email="kauanrodrigues5527@gmail.com"
       />
     </div>
   );
