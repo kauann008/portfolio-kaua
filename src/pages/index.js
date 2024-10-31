@@ -34,7 +34,7 @@ export default function Home() {
       <TituloSessao titulo="Espero que você tenha gostado." />
       Livre para todos os publicos. 
       <Rodape
-        nome="Kauan Rodrigues"
+        nome=" Criador Kauan Rodrigues"
         linkGithub="https://github.com/seuusuario"
         linkLinkedin="https://linkedin.com/in/seuusuario"
         email="kauanrodrigues5527@gmail.com"
