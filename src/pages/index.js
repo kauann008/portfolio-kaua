@@ -6,9 +6,9 @@ import { Cartao } from '../componentes/cartao';
 import { Rodape } from '../componentes/rodape';
 
 const projetos = [
-  { nome: 'Projeto kauan', descricao: 'Descrição do projeto A' },
-  { nome: 'Projeto B', descricao: 'Descrição do projeto B' },
-  { nome: 'Projeto C', descricao: 'Descrição do projeto C' },
+  { nome: 'Projeto 1', descricao: 'Minha carreira' },
+  { nome: 'Projeto 2', descricao: 'Minha historia ' },
+  { nome: 'Projeto 3', descricao: 'Meus titulos individuais' },
 ];
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
     <div className="app">
       <Cabecalho
         nome="Meu Portfólio"
-        subtitulo="Bem-vindo ao meu espaço"
+        subtitulo="Bem-vindo ao maraca"
         descricao="Aqui você encontrará uma seleção dos meus projetos e experiências."
       />
       <Titulo nome="Projetos" subnome="Alguns dos meus trabalhos recentes" />
@@ -26,14 +26,15 @@ export default function Home() {
             key={index}
             titulo={projeto.nome}
             conteudo={projeto.descricao}
-            botaoTexto="Ver Projeto"
+            botaoTexto="Acessar"
             onClickBotao={() => alert(`Abrindo ${projeto.nome}`)}
           />
         ))}
       </section>
-      <TituloSessao titulo="Experiência e Educação" />
+      <TituloSessao titulo="Espero que você tenha gostado." />
+      Livre para todos os publicos. 
       <Rodape
-        nome="Seu Nome"
+        nome="Kauan Rodrigues"
         linkGithub="https://github.com/seuusuario"
         linkLinkedin="https://linkedin.com/in/seuusuario"
         email="kauanrodrigues5527@gmail.com"
