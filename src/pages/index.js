@@ -1,12 +1,23 @@
-import React from 'react';
+
+
+
+
+
+
+
+
+
+
+ import React from 'react';
 import { Cabecalho } from '../componentes/cabecalho';
 import { Titulo } from '../componentes/title';
 import { TituloSessao } from '../componentes/tituloSessao';
 import { Cartao } from '../componentes/cartao';
 import { Rodape } from '../componentes/rodape';
+import { Likes } from '@/componentes/Likes';
 
 const projetos = [
-  { nome: 'Projeto 1', descricao: 'Minha carreira' },
+  { nome: 'Sobre mim', descricao: 'Prazer meu nome e Kauan Rodrigues Regino,Tenho 16 anos moro em palmas tocantins' },
   { nome: 'Projeto 2', descricao: 'Minha historia ' },
   { nome: 'Projeto 3', descricao: 'Meus titulos individuais' },
 ];
@@ -19,6 +30,7 @@ export default function Home() {
         subtitulo="Bem-vindo ao maraca"
         descricao="Aqui você encontrará uma seleção dos meus projetos e experiências."
       />
+      <Likes/>
       <Titulo nome="Projetos" subnome="Alguns dos meus trabalhos recentes" />
       <section className="projetos">
         {projetos.map((projeto, index) => (
